@@ -211,7 +211,11 @@
                         <viewLayoutGuide key="safeArea" id="bfx-bv-wVf"/>
                     </view>
                     <navigationItem key="navigationItem" id="TZ7-tE-zY2">
-                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="hVK-Fq-hU9"/>
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="hVK-Fq-hU9">
+                            <connections>
+                                <action selector="onCancelButtonTapped:" destination="FX3-Kq-7me" id="tRM-AM-G8Q"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="完了" id="jiN-LP-Rd3">
                             <connections>
                                 <action selector="completedButtonTapped:" destination="FX3-Kq-7me" id="ZrT-kl-ja2"/>
