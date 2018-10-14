@@ -165,6 +165,8 @@ extension SearchResultViewController: UISearchBarDelegate {
                 controller.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
                 self.present(controller, animated: true, completion: nil)
                 
+                // ローディング終了
+                SVProgressHUD.dismiss()
                 return
             }
             
@@ -174,6 +176,8 @@ extension SearchResultViewController: UISearchBarDelegate {
                 controller.addAction(UIAlertAction(title: "OK",style: UIAlertActionStyle.cancel, handler: nil))
                 self.present(controller, animated: true, completion: nil)
                 
+                // ローディング終了
+                SVProgressHUD.dismiss()
                 return
             }
             
@@ -187,6 +191,8 @@ extension SearchResultViewController: UISearchBarDelegate {
                     controller.addAction(UIAlertAction(title:"OK", style: UIAlertActionStyle.cancel, handler: nil))
                     self.present(controller, animated: true,completion: nil)
                     
+                    // ローディング終了
+                    SVProgressHUD.dismiss()
                     return
                 }
                 
@@ -197,7 +203,7 @@ extension SearchResultViewController: UISearchBarDelegate {
                 SVProgressHUD.dismiss()
             }
             
-            // メモリリーク対応→未使用タスクをキャンセルする
+            // メモリリーク対応 → 未使用タスクをキャンセルする
             session.invalidateAndCancel()
         }
         // タスクを実行

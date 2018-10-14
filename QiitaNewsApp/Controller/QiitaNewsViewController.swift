@@ -30,14 +30,10 @@ class QiitaNewsViewController: UIViewController,UITableViewDataSource, UITableVi
         
         // タイトル設定
         self.navigationItem.title = "最新記事"
-        
-        // ここから実装を追加
         if #available(iOS 11, *) {
-            // iOS11以上（iOS11～）の場合はここを通る
+            // iOS11以上の場合 → ラージタイトルの設定
             self.navigationController?.navigationBar.prefersLargeTitles = true
             self.navigationItem.largeTitleDisplayMode = .automatic
-        } else {
-            // iOS11未満（～iOS10）の場合にはここを通る
         }
         
         // ファイルの読み込む
@@ -172,7 +168,8 @@ class QiitaNewsViewController: UIViewController,UITableViewDataSource, UITableVi
                     controller.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
                     self.present(controller, animated:true, completion: nil)
                 }
-                // 表示後は処理終了
+                // ローディング終了
+                SVProgressHUD.dismiss()
                 return
             }
             
@@ -190,7 +187,8 @@ class QiitaNewsViewController: UIViewController,UITableViewDataSource, UITableVi
                     controller.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
                     self.present(controller, animated:true, completion: nil)
                 }
-                // 表示後は処理終了
+                // ローディング終了
+                SVProgressHUD.dismiss()
                 return
             }
             
@@ -202,7 +200,6 @@ class QiitaNewsViewController: UIViewController,UITableViewDataSource, UITableVi
                 if self.refreshControl.isRefreshing {
                     self.refreshControl.endRefreshing()
                 }
-                
                 // 最新のデータに更新する
                 self.tableView.reloadData()
                 

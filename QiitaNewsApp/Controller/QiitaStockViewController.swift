@@ -11,7 +11,7 @@ import SafariServices
 import SDWebImage
 import SVProgressHUD
 
-class QiitaStockViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class QiitaStockViewController: UIViewController {
     
     // 取得した記事データ保持用
     var dataList:[QiitaNewsModel] = []
@@ -30,14 +30,10 @@ class QiitaStockViewController: UIViewController,UITableViewDataSource, UITableV
         
         // タイトル設定
         self.navigationItem.title = "ストック記事"
-        
-        // ここから実装を追加
         if #available(iOS 11, *) {
-            // iOS11以上（iOS11～）の場合はここを通る
+            // iOS11以上の場合 → ラージタイトルの設定
             self.navigationController?.navigationBar.prefersLargeTitles = true
             self.navigationItem.largeTitleDisplayMode = .automatic
-        } else {
-            // iOS11未満（～iOS10）の場合にはここを通る
         }
         
         // ファイルの読み込む
@@ -56,6 +52,100 @@ class QiitaStockViewController: UIViewController,UITableViewDataSource, UITableV
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    // MARK: -
+    /*
+     引っ張って更新を行ったら実行されるメソッド
+     */
+    @objc func refreshReload(_ sender: UIRefreshControl) {
+        // データを更新する
+        self.reloadListDatas()
+    }
+    
+    // MARK: -
+    /*
+     記事の更新
+     */
+    func reloadListDatas() {
+        // ローディング開始
+        SVProgressHUD.show(withStatus: "Loading...")
+        
+        // セッション用のコンフィグを設定・今回はデフォルトの設定
+        let config = URLSessionConfiguration.default
+        
+        // NSURLSessionのインスタンスを生成
+        let session = URLSession(configuration: config)
+        
+        // 接続するURLを指定
+        let url = URL(string: "https://qiita.com/api/v2/users/_CHUBURA/stocks")
+        
+        // 通信処理タスクを設定
+        let task = session.dataTask(with: url!) {(data, response, error) in
+            
+            // エラーが発生した場合にのみ処理
+            if error != nil {
+                // メインスレッドに処理を戻す
+                DispatchQueue.main.async {
+                    // もし引っ張って更新していたらUIを元に戻す
+                    if self.refreshControl.isRefreshing {
+                        self.refreshControl.endRefreshing()
+                    }
+                    
+                    // ここでエラーが発生したことをアラートで表示
+                    let controller : UIAlertController = UIAlertController(title: nil,message: "エラーが発生しました。", preferredStyle: UIAlertControllerStyle.alert)
+                    controller.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+                    self.present(controller, animated:true, completion: nil)
+                }
+                // ローディング終了
+                SVProgressHUD.dismiss()
+                return
+            }
+            
+            // エラーがなければ、JSON形式にデータを変換して格納
+            guard let jsonData: Data = data else {
+                // メインスレッドに処理を戻す
+                DispatchQueue.main.async {
+                    // もし引っ張って更新していたらUIを元に戻す
+                    if self.refreshControl.isRefreshing {
+                        self.refreshControl.endRefreshing()
+                    }
+                    
+                    // ここでエラーが発生したことをアラートで表示
+                    let controller : UIAlertController = UIAlertController(title: nil,message: "エラーが発生しました。", preferredStyle: UIAlertControllerStyle.alert)
+                    controller.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+                    self.present(controller, animated:true, completion: nil)
+                }
+                // ローディング終了
+                SVProgressHUD.dismiss()
+                return
+            }
+            
+            self.dataList = try! JSONDecoder().decode([QiitaNewsModel].self, from: jsonData)
+            
+            // メインスレッドに処理を戻す
+            DispatchQueue.main.async {
+                // もし引っ張って更新していたらUIを元に戻す
+                if self.refreshControl.isRefreshing {
+                    self.refreshControl.endRefreshing()
+                }
+                // 最新のデータに更新する
+                self.tableView.reloadData()
+                
+                // ローディング終了
+                SVProgressHUD.dismiss()
+            }
+            
+            // メモリリーク対応→未使用タスクをキャンセルする
+            session.invalidateAndCancel()
+        }
+        // タスクを実施
+        task.resume()
+    }
+}
+
+
+extension QiitaStockViewController: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: -
     /*
@@ -115,94 +205,6 @@ class QiitaStockViewController: UIViewController,UITableViewDataSource, UITableV
             let controller: SFSafariViewController = SFSafariViewController(url: url)
             self.present(controller, animated: true, completion: nil)
         }
-    }
-    
-    // MARK: -
-    /*
-     記事の更新
-     */
-    func reloadListDatas() {
-        // ローディング開始
-        SVProgressHUD.show(withStatus: "Loading...")
-        
-        // セッション用のコンフィグを設定・今回はデフォルトの設定
-        let config = URLSessionConfiguration.default
-        
-        // NSURLSessionのインスタンスを生成
-        let session = URLSession(configuration: config)
-        
-        // 接続するURLを指定
-        let url = URL(string: "https://qiita.com/api/v2/users/_CHUBURA/stocks")
-        
-        // 通信処理タスクを設定
-        let task = session.dataTask(with: url!) {(data, response, error) in
-            
-            // エラーが発生した場合にのみ処理
-            if error != nil {
-                // メインスレッドに処理を戻す
-                DispatchQueue.main.async {
-                    // もし引っ張って更新していたらUIを元に戻す
-                    if self.refreshControl.isRefreshing {
-                        self.refreshControl.endRefreshing()
-                    }
-                    
-                    // ここでエラーが発生したことをアラートで表示
-                    let controller : UIAlertController = UIAlertController(title: nil,message: "エラーが発生しました。", preferredStyle: UIAlertControllerStyle.alert)
-                    controller.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
-                    self.present(controller, animated:true, completion: nil)
-                }
-                // 表示後は処理終了
-                return
-            }
-            
-            // エラーがなければ、JSON形式にデータを変換して格納
-            guard let jsonData: Data = data else {
-                // メインスレッドに処理を戻す
-                DispatchQueue.main.async {
-                    // もし引っ張って更新していたらUIを元に戻す
-                    if self.refreshControl.isRefreshing {
-                        self.refreshControl.endRefreshing()
-                    }
-                    
-                    // ここでエラーが発生したことをアラートで表示
-                    let controller : UIAlertController = UIAlertController(title: nil,message: "エラーが発生しました。", preferredStyle: UIAlertControllerStyle.alert)
-                    controller.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
-                    self.present(controller, animated:true, completion: nil)
-                }
-                // 表示後は処理終了
-                return
-            }
-            
-            self.dataList = try! JSONDecoder().decode([QiitaNewsModel].self, from: jsonData)
-            
-            // メインスレッドに処理を戻す
-            DispatchQueue.main.async {
-                // もし引っ張って更新していたらUIを元に戻す
-                if self.refreshControl.isRefreshing {
-                    self.refreshControl.endRefreshing()
-                }
-                
-                // 最新のデータに更新する
-                self.tableView.reloadData()
-                
-                // ローディング終了
-                SVProgressHUD.dismiss()
-            }
-            
-            // メモリリーク対応→未使用タスクをキャンセルする
-            session.invalidateAndCancel()
-        }
-        // タスクを実施
-        task.resume()
-    }
-    
-    // MARK: -
-    /*
-     引っ張って更新を行ったら実行されるメソッド
-     */
-    @objc func refreshReload(_ sender: UIRefreshControl) {
-        // データを更新する
-        self.reloadListDatas()
     }
 }
 

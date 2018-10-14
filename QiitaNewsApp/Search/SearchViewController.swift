@@ -37,8 +37,11 @@ class SearchViewController: UIViewController {
         
         // タイトル設定
         self.title = "検索"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.largeTitleDisplayMode = .automatic
+        if #available(iOS 11, *) {
+            // iOS11以上の場合 → ラージタイトルの設定
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationItem.largeTitleDisplayMode = .automatic
+        }
         
         // 検索処理をSearchResultViewControllerで処理するよう指定
         searchController.searchBar.delegate = searchResultViewController
