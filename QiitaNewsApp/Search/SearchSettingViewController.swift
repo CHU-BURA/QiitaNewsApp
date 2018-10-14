@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchSettingViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
+class SearchSettingViewController: UIViewController {
     
     // 検索設定値保持キー
     let SETTING_KEY = "searchSettingKey"
@@ -48,6 +48,28 @@ class SearchSettingViewController: UIViewController, UIPickerViewDataSource, UIP
         super.didReceiveMemoryWarning()
     }
     
+    
+    // MARK: -
+    /*
+     「完了」押下時の処理
+     */
+    @IBAction func completedButtonTapped(_ sender: Any) {
+        // 画面を閉じて、SearchViewControllerへ戻る処理
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: -
+    /*
+     「キャンセル」押下時の処理
+     */
+    @IBAction func onCancelButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+
+extension SearchSettingViewController: UIPickerViewDataSource, UIPickerViewDelegate{
+
     // MARK: -
     /*
      PickerViewの列数指定
@@ -81,22 +103,5 @@ class SearchSettingViewController: UIViewController, UIPickerViewDataSource, UIP
         let settings = UserDefaults.standard
         settings.setValue(searchOptions[row], forKey: SETTING_KEY)
         settings.synchronize()
-    }
-    
-    // MARK: -
-    /*
-     「完了」押下時の処理
-     */
-    @IBAction func completedButtonTapped(_ sender: Any) {
-        // 画面を閉じて、SearchViewControllerへ戻る処理
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    // MARK: -
-    /*
-     「キャンセル」押下時の処理
-     */
-    @IBAction func onCancelButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
 }

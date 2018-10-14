@@ -13,10 +13,11 @@ import SVProgressHUD
 
 class QiitaStockViewController: UIViewController {
     
-    // 取得した記事データ保持用
-    var dataList:[QiitaNewsModel] = []
     // リフレッシュ
     let refreshControl: UIRefreshControl = UIRefreshControl()
+    
+    // 取得した記事データ保持用
+    var dataList:[QiitaNewsModel] = []
     
     @IBOutlet weak var tableView: UITableView!
     

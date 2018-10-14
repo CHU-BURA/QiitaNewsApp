@@ -11,12 +11,13 @@ import SafariServices
 import SDWebImage
 import SVProgressHUD
 
-class QiitaNewsViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+class QiitaNewsViewController: UIViewController {
+    
+    // リフレッシュ
+    let refreshControl: UIRefreshControl = UIRefreshControl()
     
     // 取得した記事データ保持用
     var dataList:[QiitaNewsModel] = []
-    // リフレッシュ
-    let refreshControl: UIRefreshControl = UIRefreshControl()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -53,65 +54,6 @@ class QiitaNewsViewController: UIViewController,UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: -
-    /*
-     UITableViewのセクション数を設定する
-     */
-    func numberOfSections(in tableView: UITableView) -> Int {
-        // セクションは1つ
-        return 1
-    }
-    
-    // MARK: -
-    /*
-     UITableViewのセクションに表示する記事数を設定する
-     */
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // 取得したデータの数だけセルを表示
-        return dataList.count
-    }
-    
-    // MARK: -
-    /*
-     セルの表示内容を設定する
-     */
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        // QiitaNewsCellのインスタンス生成
-        let cell: QiitaNewsCell = tableView.dequeueReusableCell(withIdentifier: "QiitaNewsCell", for: indexPath) as! QiitaNewsCell
-        
-        // 取得したデータの取り出し
-        let data = dataList[indexPath.row]
-        
-        // 取得したデータの設定
-        let urlStr = data.user.profile_image_url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! // URL文字列のエンコード
-        let url = URL(string: urlStr)! // URL型へ変換
-        cell.createdAt.text = data.dateString
-        cell.profileImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholderImage.png")) // 画像URLの設定
-        cell.userName.text = data.user.id
-        cell.title.text = data.title
-        
-        return cell
-    }
-    
-    // MARK: -
-    /*
-     セル選択時の処理
-     */
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // セルの選択を解除
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        // データの取り出し
-        let data = dataList[indexPath.row]
-        
-        // 記事URLを取得し、SFSafariViewControllerで表示
-        if let url = URL(string: data.url) {
-            // 次の画面へ遷移して、SFSafariViewControllerで表示する
-            let controller: SFSafariViewController = SFSafariViewController(url: url)
-            self.present(controller, animated: true, completion: nil)
-        }
-    }
     
     // MARK: -
     /*
@@ -132,6 +74,15 @@ class QiitaNewsViewController: UIViewController,UITableViewDataSource, UITableVi
         //tabBarController?.tabBar.isHidden = true // タブメニュー非表示
         tabBarController?.tabBarItem.isEnabled = true
         self.performSegue(withIdentifier: "showMenu", sender: nil)
+    }
+    
+    // MARK: -
+    /*
+     引っ張って更新を行ったら実行されるメソッド
+     */
+    @objc func refreshReload(_ sender: UIRefreshControl) {
+        // データを更新する
+        self.reloadListDatas()
     }
     
     // MARK: -
@@ -214,14 +165,69 @@ class QiitaNewsViewController: UIViewController,UITableViewDataSource, UITableVi
         // タスクを実施
         task.resume()
     }
+}
+
+
+extension QiitaNewsViewController: UITableViewDataSource, UITableViewDelegate {
+
+    // MARK: -
+    /*
+     UITableViewのセクション数を設定する
+     */
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // セクションは1つ
+        return 1
+    }
     
     // MARK: -
     /*
-     引っ張って更新を行ったら実行されるメソッド
+     UITableViewのセクションに表示する記事数を設定する
      */
-    @objc func refreshReload(_ sender: UIRefreshControl) {
-        // データを更新する
-        self.reloadListDatas()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // 取得したデータの数だけセルを表示
+        return dataList.count
+    }
+    
+    // MARK: -
+    /*
+     セルの表示内容を設定する
+     */
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // QiitaNewsCellのインスタンス生成
+        let cell: QiitaNewsCell = tableView.dequeueReusableCell(withIdentifier: "QiitaNewsCell", for: indexPath) as! QiitaNewsCell
+        
+        // 取得したデータの取り出し
+        let data = dataList[indexPath.row]
+        
+        // 取得したデータの設定
+        let urlStr = data.user.profile_image_url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! // URL文字列のエンコード
+        let url = URL(string: urlStr)! // URL型へ変換
+        cell.createdAt.text = data.dateString
+        cell.profileImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholderImage.png")) // 画像URLの設定
+        cell.userName.text = data.user.id
+        cell.title.text = data.title
+        
+        return cell
+    }
+    
+    // MARK: -
+    /*
+     セル選択時の処理
+     */
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // セルの選択を解除
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // データの取り出し
+        let data = dataList[indexPath.row]
+        
+        // 記事URLを取得し、SFSafariViewControllerで表示
+        if let url = URL(string: data.url) {
+            // 次の画面へ遷移して、SFSafariViewControllerで表示する
+            let controller: SFSafariViewController = SFSafariViewController(url: url)
+            self.present(controller, animated: true, completion: nil)
+        }
     }
 }
 

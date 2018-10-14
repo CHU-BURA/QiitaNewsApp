@@ -102,33 +102,6 @@ class SearchResultViewController: UITableViewController {
             self.present(controller, animated: true,completion: nil)
         }
     }
-}
-
-
-
-
-extension SearchResultViewController: UISearchBarDelegate {
-    
-    // MARK: -
-    /*
-     UISearchBar編集時の処理
-     */
-    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        // 検索窓の文字列に何かしら変化があるたびに呼ばれる
-        // 保持しているデータを空にする
-        self.dataList = []
-        self.tableView.reloadData()
-        return true
-    }
-    
-    // MARK: -
-    /*
-     UISearchBar編集時における「検索」押下時の処理
-     */
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // 検索を押した時に処理
-        reloadListDatas(searchBar.text!)
-    }
     
     // MARK: -
     /*
@@ -208,5 +181,30 @@ extension SearchResultViewController: UISearchBarDelegate {
         }
         // タスクを実行
         task.resume()
+    }
+}
+
+
+extension SearchResultViewController: UISearchBarDelegate {
+    
+    // MARK: -
+    /*
+     UISearchBar編集時の処理
+     */
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        // 検索窓の文字列に何かしら変化があるたびに呼ばれる
+        // 保持しているデータを空にする
+        self.dataList = []
+        self.tableView.reloadData()
+        return true
+    }
+    
+    // MARK: -
+    /*
+     UISearchBar編集時における「検索」押下時の処理
+     */
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // 検索を押した時に処理
+        reloadListDatas(searchBar.text!)
     }
 }
