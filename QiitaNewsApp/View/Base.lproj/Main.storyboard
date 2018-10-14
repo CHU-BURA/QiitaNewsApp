@@ -439,7 +439,7 @@
         <!--Qiita Stock View Controller-->
         <scene sceneID="TEM-Vd-Uyj">
             <objects>
-                <viewController id="DnH-Tw-hzu" customClass="QiitaStockViewController" customModule="QiitaNewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QiitaStockViewController" id="DnH-Tw-hzu" customClass="QiitaStockViewController" customModule="QiitaNewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c5Y-Z8-4Bl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
