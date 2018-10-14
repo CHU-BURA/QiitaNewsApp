@@ -196,6 +196,9 @@ extension SearchResultViewController: UISearchBarDelegate {
                 // ローディング終了
                 SVProgressHUD.dismiss()
             }
+            
+            // メモリリーク対応→未使用タスクをキャンセルする
+            session.invalidateAndCancel()
         }
         // タスクを実行
         task.resume()

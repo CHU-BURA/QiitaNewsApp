@@ -210,6 +210,7 @@
 		CA771600216BA78800235B52 /* QiitaNewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				CA771601216BA78800235B52 /* AppDelegate.swift */,
 				CAD00EFC216E5DEF00D9FF60 /* Model */,
 				CA6A605F2172533700F0CF5D /* View */,
 				CA6A60602172539400F0CF5D /* Controller */,
@@ -241,7 +242,6 @@
 		CAD00EFB216E5DAC00D9FF60 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				CA771601216BA78800235B52 /* AppDelegate.swift */,
 				CA771631216BA7FB00235B52 /* SearchViewController.swift */,
 				CA771636216BA7FC00235B52 /* SearchResultViewController.swift */,
 				CAD00EF9216E5D6100D9FF60 /* SearchSettingViewController.swift */,
