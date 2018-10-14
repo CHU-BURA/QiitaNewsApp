@@ -11,6 +11,7 @@
 		C892792A23BABAF974BAF884 /* Pods_QiitaNewsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC88B2C38394B87575A880B /* Pods_QiitaNewsAppUITests.framework */; };
 		CA24451B216CF3B200B55891 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA24451A216CF3B200B55891 /* SDWebImage.framework */; };
 		CA4331981FD49B2AC87BB817 /* Pods_QiitaNewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 193DC12FF6966B4CC3F65DEB /* Pods_QiitaNewsApp.framework */; };
+		CA6A606D2172FED400F0CF5D /* QiitaStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6A606C2172FED400F0CF5D /* QiitaStockViewController.swift */; };
 		CA771602216BA78800235B52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771601216BA78800235B52 /* AppDelegate.swift */; };
 		CA771607216BA78800235B52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA771605216BA78800235B52 /* Main.storyboard */; };
 		CA771609216BA78900235B52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA771608216BA78900235B52 /* Assets.xcassets */; };
@@ -24,6 +25,9 @@
 		CA771644216BAA5400235B52 /* QiitaNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771643216BAA5400235B52 /* QiitaNewsModel.swift */; };
 		CA771647216BB75F00235B52 /* QiitaNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771645216BB75F00235B52 /* QiitaNewsCell.swift */; };
 		CA771648216BB75F00235B52 /* QiitaNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA771646216BB75F00235B52 /* QiitaNewsCell.xib */; };
+		CA8C0ACD21731B4E00DA5FAF /* Recents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8C0ACC21731B4E00DA5FAF /* Recents.storyboard */; };
+		CA8C0ACF21731CC800DA5FAF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8C0ACE21731CC800DA5FAF /* Search.storyboard */; };
+		CA8C0AD121731DAB00DA5FAF /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8C0AD021731DAB00DA5FAF /* Favorites.storyboard */; };
 		CAD00EFA216E5D6100D9FF60 /* SearchSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD00EF9216E5D6100D9FF60 /* SearchSettingViewController.swift */; };
 		CAD00F042170EF5400D9FF60 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD00F032170EF5400D9FF60 /* MenuViewController.swift */; };
 		CAD00F082171154600D9FF60 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD00F072171154600D9FF60 /* SVProgressHUD.framework */; };
@@ -55,6 +59,7 @@
 		95207E557A9632F5B39A1F43 /* Pods_QiitaNewsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaNewsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA244518216CEE4900B55891 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA24451A216CF3B200B55891 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA6A606C2172FED400F0CF5D /* QiitaStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaStockViewController.swift; sourceTree = "<group>"; };
 		CA7715FE216BA78800235B52 /* QiitaNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA771601216BA78800235B52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA771606216BA78800235B52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +79,9 @@
 		CA771643216BAA5400235B52 /* QiitaNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaNewsModel.swift; sourceTree = "<group>"; };
 		CA771645216BB75F00235B52 /* QiitaNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaNewsCell.swift; sourceTree = "<group>"; };
 		CA771646216BB75F00235B52 /* QiitaNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaNewsCell.xib; sourceTree = "<group>"; };
+		CA8C0ACC21731B4E00DA5FAF /* Recents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recents.storyboard; sourceTree = "<group>"; };
+		CA8C0ACE21731CC800DA5FAF /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		CA8C0AD021731DAB00DA5FAF /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		CAD00EF9216E5D6100D9FF60 /* SearchSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSettingViewController.swift; sourceTree = "<group>"; };
 		CAD00EFD2170E0E300D9FF60 /* PageMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PageMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD00EFF2170E1D100D9FF60 /* PageMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PageMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				CA771605216BA78800235B52 /* Main.storyboard */,
+				CA8C0ACC21731B4E00DA5FAF /* Recents.storyboard */,
+				CA8C0ACE21731CC800DA5FAF /* Search.storyboard */,
+				CA8C0AD021731DAB00DA5FAF /* Favorites.storyboard */,
 				CA771641216BA86D00235B52 /* LaunchScreen.storyboard */,
 				CA6A6061217253B700F0CF5D /* Cell */,
 			);
@@ -160,6 +171,7 @@
 				CAD00F032170EF5400D9FF60 /* MenuViewController.swift */,
 				CA771632216BA7FB00235B52 /* NotificationSettingViewController.swift */,
 				CA77162F216BA7FB00235B52 /* QiitaNewsViewController.swift */,
+				CA6A606C2172FED400F0CF5D /* QiitaStockViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,6 +210,7 @@
 		CA771600216BA78800235B52 /* QiitaNewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				CA771601216BA78800235B52 /* AppDelegate.swift */,
 				CAD00EFC216E5DEF00D9FF60 /* Model */,
 				CA6A605F2172533700F0CF5D /* View */,
 				CA6A60602172539400F0CF5D /* Controller */,
@@ -229,7 +242,6 @@
 		CAD00EFB216E5DAC00D9FF60 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				CA771601216BA78800235B52 /* AppDelegate.swift */,
 				CA771631216BA7FB00235B52 /* SearchViewController.swift */,
 				CA771636216BA7FC00235B52 /* SearchResultViewController.swift */,
 				CAD00EF9216E5D6100D9FF60 /* SearchSettingViewController.swift */,
@@ -354,8 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA771609216BA78900235B52 /* Assets.xcassets in Resources */,
+				CA8C0ACD21731B4E00DA5FAF /* Recents.storyboard in Resources */,
 				CA771642216BA86D00235B52 /* LaunchScreen.storyboard in Resources */,
 				CA771648216BB75F00235B52 /* QiitaNewsCell.xib in Resources */,
+				CA8C0AD121731DAB00DA5FAF /* Favorites.storyboard in Resources */,
+				CA8C0ACF21731CC800DA5FAF /* Search.storyboard in Resources */,
 				CA771607216BA78800235B52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA6A606D2172FED400F0CF5D /* QiitaStockViewController.swift in Sources */,
 				CA77163A216BA7FC00235B52 /* NotificationSettingViewController.swift in Sources */,
 				CAD00F042170EF5400D9FF60 /* MenuViewController.swift in Sources */,
 				CA771644216BAA5400235B52 /* QiitaNewsModel.swift in Sources */,

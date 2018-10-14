@@ -1,8 +1,8 @@
 //
-//  QiitaNewsViewController.swift
+//  QiitaStockViewController.swift
 //  QiitaNewsApp
 //
-//  Created by Sho Nozaki on 2018/10/08.
+//  Created by Sho Nozaki on 2018/10/14.
 //  Copyright © 2018年 Sho Nozaki. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import SafariServices
 import SDWebImage
 import SVProgressHUD
 
-class QiitaNewsViewController: UIViewController {
+class QiitaStockViewController: UIViewController {
     
     // リフレッシュ
     let refreshControl: UIRefreshControl = UIRefreshControl()
@@ -30,7 +30,7 @@ class QiitaNewsViewController: UIViewController {
         tableView?.refreshControl = refreshControl
         
         // タイトル設定
-        self.navigationItem.title = "最新記事"
+        self.navigationItem.title = "ストック記事"
         if #available(iOS 11, *) {
             // iOS11以上の場合 → ラージタイトルの設定
             self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -57,27 +57,6 @@ class QiitaNewsViewController: UIViewController {
     
     // MARK: -
     /*
-     通知設定
-     */
-    @IBAction func onNotificationSettingButtonTapped(_ sender: UIBarButtonItem) {
-        // 通知設定画面へ遷移する処理を追加
-        performSegue(withIdentifier: "MoveNotificationSettingView",sender: nil)
-    }
-    
-    // MARK: -
-    /*
-     メニュー展開
-     - TODO: 未完成
-     */
-    @IBAction func onMenuButtonTapped(_ sender: Any) {
-        // TODO: ボタン押下時にtabbarを隠したい
-        //tabBarController?.tabBar.isHidden = true // タブメニュー非表示
-        tabBarController?.tabBarItem.isEnabled = true
-        self.performSegue(withIdentifier: "showMenu", sender: nil)
-    }
-    
-    // MARK: -
-    /*
      引っ張って更新を行ったら実行されるメソッド
      */
     @objc func refreshReload(_ sender: UIRefreshControl) {
@@ -100,7 +79,7 @@ class QiitaNewsViewController: UIViewController {
         let session = URLSession(configuration: config)
         
         // 接続するURLを指定
-        let url = URL(string: "https://qiita.com/api/v2/items")
+        let url = URL(string: "https://qiita.com/api/v2/users/_CHUBURA/stocks")
         
         // 通信処理タスクを設定
         let task = session.dataTask(with: url!) {(data, response, error) in
@@ -161,15 +140,14 @@ class QiitaNewsViewController: UIViewController {
             // メモリリーク対応→未使用タスクをキャンセルする
             session.invalidateAndCancel()
         }
-        
         // タスクを実施
         task.resume()
     }
 }
 
 
-extension QiitaNewsViewController: UITableViewDataSource, UITableViewDelegate {
-
+extension QiitaStockViewController: UITableViewDataSource, UITableViewDelegate {
+    
     // MARK: -
     /*
      UITableViewのセクション数を設定する
@@ -230,4 +208,5 @@ extension QiitaNewsViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
+
 

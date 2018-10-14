@@ -8,7 +8,7 @@
 
 import UIKit
 
-// TODO: 未完成→GiHubも導入したい
+// TODO: 未完成 → GiHubも導入したい
 class MenuViewController: UIViewController{
     
     @IBOutlet weak var menuView: UIView!

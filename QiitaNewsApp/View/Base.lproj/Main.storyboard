@@ -6,307 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu View Controller-->
-        <scene sceneID="fzG-it-eZu">
-            <objects>
-                <viewController id="Wcp-xd-y54" customClass="MenuViewController" customModule="QiitaNewsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" tag="1" contentMode="scaleToFill" id="97D-3S-Wbj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwK-dI-Xsh">
-                                <rect key="frame" x="0.0" y="0.0" width="260" height="667"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="43V-rs-wl0">
-                                        <rect key="frame" x="0.0" y="0.0" width="260" height="667"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" id="ePd-Tl-78V">
-                                                <rect key="frame" x="0.0" y="28" width="260" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ePd-Tl-78V" id="ybX-vI-bPk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="43V-rs-wl0" secondAttribute="trailing" id="DyR-PK-dnU"/>
-                                    <constraint firstAttribute="bottom" secondItem="43V-rs-wl0" secondAttribute="bottom" id="Gxj-71-yFd"/>
-                                    <constraint firstItem="43V-rs-wl0" firstAttribute="top" secondItem="xwK-dI-Xsh" secondAttribute="top" id="Nn1-vS-SUp"/>
-                                    <constraint firstItem="43V-rs-wl0" firstAttribute="leading" secondItem="xwK-dI-Xsh" secondAttribute="leading" id="rIg-48-OjR"/>
-                                    <constraint firstAttribute="width" constant="260" id="wDr-BT-fxb"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.72314200129533679" green="0.72314200129533679" blue="0.72314200129533679" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="xwK-dI-Xsh" secondAttribute="bottom" id="Ycu-i4-rUT"/>
-                            <constraint firstItem="xwK-dI-Xsh" firstAttribute="leading" secondItem="Ga0-pw-OKi" secondAttribute="leading" id="qop-Mj-Ov4"/>
-                            <constraint firstItem="xwK-dI-Xsh" firstAttribute="top" secondItem="97D-3S-Wbj" secondAttribute="top" id="wUv-vg-AAS"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ga0-pw-OKi"/>
-                    </view>
-                    <connections>
-                        <outlet property="menuView" destination="xwK-dI-Xsh" id="Iv5-sd-J01"/>
-                        <outlet property="tableView" destination="43V-rs-wl0" id="yzn-6T-fGr"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q0y-Ud-YHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1902" y="-801"/>
-        </scene>
-        <!--Qiita News View Controller-->
-        <scene sceneID="gW2-yu-sl0">
-            <objects>
-                <viewController storyboardIdentifier="QiitaNewsViewController" id="6mf-RR-taR" customClass="QiitaNewsViewController" customModule="QiitaNewsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gMx-76-Gir">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L7D-1V-qFy">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="6mf-RR-taR" id="Gt5-PB-VGf"/>
-                                    <outlet property="delegate" destination="6mf-RR-taR" id="N3Z-HF-9Lr"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="L7D-1V-qFy" firstAttribute="top" secondItem="gMx-76-Gir" secondAttribute="topMargin" id="2gc-JH-TTD"/>
-                            <constraint firstItem="L7D-1V-qFy" firstAttribute="leading" secondItem="DuG-li-NaW" secondAttribute="leading" id="Kiu-D3-oTQ"/>
-                            <constraint firstItem="DuG-li-NaW" firstAttribute="trailing" secondItem="L7D-1V-qFy" secondAttribute="trailing" id="cbg-Jl-hSq"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="L7D-1V-qFy" secondAttribute="bottom" id="smH-Z8-NOG"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="DuG-li-NaW"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="hdW-jL-Cel">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="VOq-k9-FEP">
-                            <connections>
-                                <action selector="onMenuButtonTapped:" destination="6mf-RR-taR" id="lzk-6i-yae"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="通知設定" style="done" id="OW7-ZD-YMr">
-                            <connections>
-                                <action selector="onNotificationSettingButtonTapped:" destination="6mf-RR-taR" id="dEh-cj-GnZ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="tableView" destination="L7D-1V-qFy" id="Hue-DM-Drs"/>
-                        <segue destination="ape-U4-Bxh" kind="presentation" identifier="MoveNotificationSettingView" id="3O4-ne-nmc"/>
-                        <segue destination="Wcp-xd-y54" kind="presentation" identifier="showMenu" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="log-Da-BPI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7AY-W1-LJ1" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1022" y="-69"/>
-        </scene>
-        <!--Notification Setting View Controller-->
-        <scene sceneID="vqN-0p-Rza">
-            <objects>
-                <viewController id="U9e-Gw-phg" customClass="NotificationSettingViewController" customModule="QiitaNewsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nDa-Em-wq1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知の設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aU-zG-qI3">
-                                <rect key="frame" x="16" y="80" width="278" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAj-7f-s6l">
-                                <rect key="frame" x="310" y="75" width="51" height="31"/>
-                                <connections>
-                                    <action selector="onNotificationSwitchValueChanged:" destination="U9e-Gw-phg" eventType="valueChanged" id="9FS-0c-ldh"/>
-                                </connections>
-                            </switch>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="v8A-hv-qf0">
-                                <rect key="frame" x="0.0" y="146" width="375" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="547616704.43297696">
-                                    <!--2018-05-10 03:45:04 +0000-->
-                                </date>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikv-DN-dBT">
-                                <rect key="frame" x="148.5" y="386" width="77" height="30"/>
-                                <state key="normal" title="通知を設定"/>
-                                <connections>
-                                    <action selector="onNotificationButtonTapped:" destination="U9e-Gw-phg" eventType="touchUpInside" id="c8K-ag-aM9"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="xAj-7f-s6l" firstAttribute="centerY" secondItem="2aU-zG-qI3" secondAttribute="centerY" id="O0R-Sc-bxy"/>
-                            <constraint firstItem="v8A-hv-qf0" firstAttribute="leading" secondItem="hFe-GT-xzJ" secondAttribute="leading" id="OKX-fP-8hq"/>
-                            <constraint firstItem="v8A-hv-qf0" firstAttribute="top" secondItem="2aU-zG-qI3" secondAttribute="bottom" constant="45" id="SFO-d9-Q0N"/>
-                            <constraint firstItem="hFe-GT-xzJ" firstAttribute="trailing" secondItem="xAj-7f-s6l" secondAttribute="trailing" constant="16" id="ThV-kn-6T0"/>
-                            <constraint firstItem="2aU-zG-qI3" firstAttribute="leading" secondItem="hFe-GT-xzJ" secondAttribute="leading" constant="16" id="XNw-pv-DQG"/>
-                            <constraint firstItem="v8A-hv-qf0" firstAttribute="trailing" secondItem="hFe-GT-xzJ" secondAttribute="trailing" id="oxZ-9a-RhT"/>
-                            <constraint firstItem="ikv-DN-dBT" firstAttribute="top" secondItem="v8A-hv-qf0" secondAttribute="bottom" constant="24" id="s1q-k0-U29"/>
-                            <constraint firstItem="2aU-zG-qI3" firstAttribute="top" secondItem="hFe-GT-xzJ" secondAttribute="top" constant="16" id="sOf-ld-z0V"/>
-                            <constraint firstItem="ikv-DN-dBT" firstAttribute="centerX" secondItem="nDa-Em-wq1" secondAttribute="centerX" id="vCV-I0-hPU"/>
-                            <constraint firstItem="xAj-7f-s6l" firstAttribute="leading" secondItem="2aU-zG-qI3" secondAttribute="trailing" constant="16" id="wgN-lU-qC2"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="hFe-GT-xzJ"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="sNT-CS-sgP">
-                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="stop" id="Xpa-kj-kqy">
-                            <connections>
-                                <action selector="onCloseButtonTapped:" destination="U9e-Gw-phg" id="MfM-1R-qkr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="datePicker" destination="v8A-hv-qf0" id="gNd-zD-YzM"/>
-                        <outlet property="notificationButton" destination="ikv-DN-dBT" id="Ydt-oz-i4p"/>
-                        <outlet property="notificationSwitch" destination="xAj-7f-s6l" id="7Tg-7V-rfz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8zq-Hh-REF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2708" y="-69"/>
-        </scene>
-        <!--Search Setting View Controller-->
-        <scene sceneID="vwe-Es-w81">
-            <objects>
-                <viewController id="FX3-Kq-7me" customClass="SearchSettingViewController" customModule="QiitaNewsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RYg-8B-psD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PeY-9j-IVe">
-                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="mWf-SB-vIf"/>
-                                </constraints>
-                            </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchOptionSupport" translatesAutoresizingMaskIntoConstraints="NO" id="7c2-R2-WDQ">
-                                <rect key="frame" x="0.0" y="264" width="375" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="mPO-73-eTo"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="7c2-R2-WDQ" firstAttribute="trailing" secondItem="bfx-bv-wVf" secondAttribute="trailing" id="8Nh-vg-Dt9"/>
-                            <constraint firstItem="7c2-R2-WDQ" firstAttribute="top" secondItem="PeY-9j-IVe" secondAttribute="bottom" id="GR2-yI-Ue2"/>
-                            <constraint firstItem="PeY-9j-IVe" firstAttribute="leading" secondItem="bfx-bv-wVf" secondAttribute="leading" id="KxU-Ze-1m6"/>
-                            <constraint firstItem="PeY-9j-IVe" firstAttribute="trailing" secondItem="bfx-bv-wVf" secondAttribute="trailing" id="WMn-Dm-C7X"/>
-                            <constraint firstItem="7c2-R2-WDQ" firstAttribute="leading" secondItem="bfx-bv-wVf" secondAttribute="leading" id="f8P-Zq-0m0"/>
-                            <constraint firstItem="PeY-9j-IVe" firstAttribute="top" secondItem="bfx-bv-wVf" secondAttribute="top" id="shY-bP-zPb"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="bfx-bv-wVf"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="TZ7-tE-zY2">
-                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="hVK-Fq-hU9"/>
-                        <barButtonItem key="rightBarButtonItem" title="完了" id="jiN-LP-Rd3">
-                            <connections>
-                                <action selector="completedButtonTapped:" destination="FX3-Kq-7me" id="ZrT-kl-ja2"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="searchPicker" destination="PeY-9j-IVe" id="ZFV-q2-4Fh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cb3-46-Can" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2708" y="786.65667166416802"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="tzk-lX-Ty7">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WgD-BM-cUG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" selectedImage="list" systemItem="recents" id="GnD-Ds-JNk"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gZn-x5-WdX">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6mf-RR-taR" kind="relationship" relationship="rootViewController" id="leJ-C5-gWL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bOe-z9-03V" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="174" y="-68"/>
-        </scene>
-        <!--Search View Controller-->
-        <scene sceneID="93H-7N-gEL">
-            <objects>
-                <viewController id="4Z6-fg-gzX" customClass="SearchViewController" customModule="QiitaNewsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ggf-aP-1XS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="検索窓に検索するワードを入力してください。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q35-V8-Rgh">
-                                <rect key="frame" x="16" y="94" width="343" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在の検索オプション" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3t-4i-8Zt">
-                                <rect key="frame" x="16" y="180" width="343" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="q0P-ID-dNb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQe-ly-IiY">
-                                <rect key="frame" x="60" y="205" width="255" height="75"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="Fzf-sb-MxT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="q35-V8-Rgh" firstAttribute="top" secondItem="pYk-R4-ysm" secondAttribute="top" constant="30" id="8z6-IA-VQ5"/>
-                            <constraint firstItem="pYk-R4-ysm" firstAttribute="trailing" secondItem="q35-V8-Rgh" secondAttribute="trailing" constant="16" id="Bhf-xY-u06"/>
-                            <constraint firstItem="pYk-R4-ysm" firstAttribute="trailing" secondItem="ZQe-ly-IiY" secondAttribute="trailing" constant="60" id="O0f-1G-3hh"/>
-                            <constraint firstItem="o3t-4i-8Zt" firstAttribute="top" secondItem="q35-V8-Rgh" secondAttribute="bottom" constant="45" id="fne-hZ-iDb"/>
-                            <constraint firstItem="q35-V8-Rgh" firstAttribute="leading" secondItem="pYk-R4-ysm" secondAttribute="leading" constant="16" id="jBJ-3f-Y28"/>
-                            <constraint firstItem="ZQe-ly-IiY" firstAttribute="top" secondItem="o3t-4i-8Zt" secondAttribute="bottom" id="lhh-lw-6eZ"/>
-                            <constraint firstItem="o3t-4i-8Zt" firstAttribute="leading" secondItem="pYk-R4-ysm" secondAttribute="leading" constant="16" id="nQi-Tl-K2I"/>
-                            <constraint firstItem="pYk-R4-ysm" firstAttribute="trailing" secondItem="o3t-4i-8Zt" secondAttribute="trailing" constant="16" id="qZB-pU-alr"/>
-                            <constraint firstItem="ZQe-ly-IiY" firstAttribute="leading" secondItem="pYk-R4-ysm" secondAttribute="leading" constant="60" id="w2U-y8-bAT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="pYk-R4-ysm"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1Qv-T8-Jde">
-                        <barButtonItem key="rightBarButtonItem" title="検索オプション" style="done" id="8gb-ug-Z1w">
-                            <connections>
-                                <segue destination="o8B-h1-StS" kind="presentation" id="bPE-rK-QwT"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="searchOptionLabel" destination="ZQe-ly-IiY" id="weA-9h-DWg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iL9-GW-kmM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1021.6" y="786.65667166416802"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Pjr-xe-bj4">
             <objects>
@@ -318,73 +20,44 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="WgD-BM-cUG" kind="relationship" relationship="viewControllers" id="tDC-gM-MhL"/>
-                        <segue destination="Mhx-h7-n2W" kind="relationship" relationship="viewControllers" id="aO0-Nc-59Y"/>
+                        <segue destination="GCp-bK-gHU" kind="relationship" relationship="viewControllers" id="AKZ-K0-gMR"/>
+                        <segue destination="BHV-dg-pvC" kind="relationship" relationship="viewControllers" id="800-RJ-KU3"/>
+                        <segue destination="2UQ-wc-x8d" kind="relationship" relationship="viewControllers" id="xet-aK-jLa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQb-Zw-3to" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-615" y="406"/>
+            <point key="canvasLocation" x="-1310" y="756"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ltb-Tz-fDq">
+        <!--Recents-->
+        <scene sceneID="4I7-Eb-SWW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mhx-h7-n2W" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="NUo-bI-4QV"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ab6-Px-25z">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4Z6-fg-gzX" kind="relationship" relationship="rootViewController" id="2SW-fz-9wH"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iy1-2N-mLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Recents" id="GCp-bK-gHU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="uAd-JA-ZW3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxw-dV-GmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="787"/>
+            <point key="canvasLocation" x="-399" y="468"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="iSm-cv-Xn7">
+        <!--Search-->
+        <scene sceneID="muu-1f-yBB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ape-U4-Bxh" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ogg-6p-KUb">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="U9e-Gw-phg" kind="relationship" relationship="rootViewController" id="HoK-ok-UYr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0KI-ua-gKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Search" id="BHV-dg-pvC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="ha0-t1-1Ct"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPt-Rf-6PQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="-70"/>
+            <point key="canvasLocation" x="-399" y="755"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7XL-4y-VvR">
+        <!--Favorites-->
+        <scene sceneID="0Ib-vB-xDM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o8B-h1-StS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zja-nt-rfj">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="FX3-Kq-7me" kind="relationship" relationship="rootViewController" id="Rq2-KV-xkF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ry6-Ef-cfq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Favorites" id="2UQ-wc-x8d" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="IN9-bQ-CnN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="852-1f-dbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873" y="787"/>
+            <point key="canvasLocation" x="-394" y="1005"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="list" width="30" height="30"/>
-        <image name="menu" width="24" height="24"/>
-        <image name="searchOptionSupport" width="1018" height="696"/>
-    </resources>
 </document>

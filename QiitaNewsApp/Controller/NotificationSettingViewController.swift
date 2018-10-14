@@ -94,13 +94,8 @@ class NotificationSettingViewController: UIViewController {
                 // dateComponentsで設定した時間で通知。今回は繰り返し通知を行うので、repeatsはtrue
                 let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents,repeats: true)
 
-                // 通知の識別子を設定
-                let identifier = "NewsNotification"
-
-                // 通知の内容と時間をもとにリクエスト作成
-                let request = UNNotificationRequest(identifier:identifier,
-                                                    content:content,
-                                                    trigger:trigger)
+                // 通知内容と時間をもとにリクエスト作成
+                let request = UNNotificationRequest(identifier:"NewsNotification", content:content, trigger:trigger)
 
                 // 通知を設定する
                 center.add(request, withCompletionHandler: nil)
