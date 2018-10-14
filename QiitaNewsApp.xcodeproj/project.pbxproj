@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		125DE1909E47F8B55D0DF161 /* Pods_QiitaNewsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95207E557A9632F5B39A1F43 /* Pods_QiitaNewsAppTests.framework */; };
+		C892792A23BABAF974BAF884 /* Pods_QiitaNewsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC88B2C38394B87575A880B /* Pods_QiitaNewsAppUITests.framework */; };
+		CA24451B216CF3B200B55891 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA24451A216CF3B200B55891 /* SDWebImage.framework */; };
+		CA4331981FD49B2AC87BB817 /* Pods_QiitaNewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 193DC12FF6966B4CC3F65DEB /* Pods_QiitaNewsApp.framework */; };
+		CA771602216BA78800235B52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771601216BA78800235B52 /* AppDelegate.swift */; };
+		CA771607216BA78800235B52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA771605216BA78800235B52 /* Main.storyboard */; };
+		CA771609216BA78900235B52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA771608216BA78900235B52 /* Assets.xcassets */; };
+		CA771617216BA78900235B52 /* QiitaNewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771616216BA78900235B52 /* QiitaNewsAppTests.swift */; };
+		CA771622216BA78900235B52 /* QiitaNewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771621216BA78900235B52 /* QiitaNewsAppUITests.swift */; };
+		CA771637216BA7FC00235B52 /* QiitaNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA77162F216BA7FB00235B52 /* QiitaNewsViewController.swift */; };
+		CA771639216BA7FC00235B52 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771631216BA7FB00235B52 /* SearchViewController.swift */; };
+		CA77163A216BA7FC00235B52 /* NotificationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771632216BA7FB00235B52 /* NotificationSettingViewController.swift */; };
+		CA77163E216BA7FC00235B52 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771636216BA7FC00235B52 /* SearchResultViewController.swift */; };
+		CA771642216BA86D00235B52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA771641216BA86D00235B52 /* LaunchScreen.storyboard */; };
+		CA771644216BAA5400235B52 /* QiitaNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771643216BAA5400235B52 /* QiitaNewsModel.swift */; };
+		CA771647216BB75F00235B52 /* QiitaNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA771645216BB75F00235B52 /* QiitaNewsCell.swift */; };
+		CA771648216BB75F00235B52 /* QiitaNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA771646216BB75F00235B52 /* QiitaNewsCell.xib */; };
+		CAD00EFA216E5D6100D9FF60 /* SearchSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD00EF9216E5D6100D9FF60 /* SearchSettingViewController.swift */; };
+		CAD00F042170EF5400D9FF60 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD00F032170EF5400D9FF60 /* MenuViewController.swift */; };
+		CAD00F082171154600D9FF60 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD00F072171154600D9FF60 /* SVProgressHUD.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA771613216BA78900235B52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA7715F6216BA78800235B52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA7715FD216BA78800235B52;
+			remoteInfo = QiitaNewsApp;
+		};
+		CA77161E216BA78900235B52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA7715F6216BA78800235B52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA7715FD216BA78800235B52;
+			remoteInfo = QiitaNewsApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		193DC12FF6966B4CC3F65DEB /* Pods_QiitaNewsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaNewsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F5272DA62AB8FD1F67867DA /* Pods-QiitaNewsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaNewsAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaNewsAppUITests/Pods-QiitaNewsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5FF22BD50FBBD27B91FC5568 /* Pods-QiitaNewsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaNewsAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaNewsAppTests/Pods-QiitaNewsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		619F73B1958B0825DCA8B51B /* Pods-QiitaNewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaNewsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaNewsApp/Pods-QiitaNewsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6AFDA863A8AB6CDE1E48A37E /* Pods-QiitaNewsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaNewsAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaNewsAppTests/Pods-QiitaNewsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		95207E557A9632F5B39A1F43 /* Pods_QiitaNewsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaNewsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA244518216CEE4900B55891 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA24451A216CF3B200B55891 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7715FE216BA78800235B52 /* QiitaNewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiitaNewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA771601216BA78800235B52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA771606216BA78800235B52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA771608216BA78900235B52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA77160D216BA78900235B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA771612216BA78900235B52 /* QiitaNewsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaNewsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA771616216BA78900235B52 /* QiitaNewsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaNewsAppTests.swift; sourceTree = "<group>"; };
+		CA771618216BA78900235B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA77161D216BA78900235B52 /* QiitaNewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QiitaNewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA771621216BA78900235B52 /* QiitaNewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaNewsAppUITests.swift; sourceTree = "<group>"; };
+		CA771623216BA78900235B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA77162F216BA7FB00235B52 /* QiitaNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiitaNewsViewController.swift; sourceTree = "<group>"; };
+		CA771631216BA7FB00235B52 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CA771632216BA7FB00235B52 /* NotificationSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationSettingViewController.swift; sourceTree = "<group>"; };
+		CA771636216BA7FC00235B52 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		CA771641216BA86D00235B52 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA771643216BAA5400235B52 /* QiitaNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaNewsModel.swift; sourceTree = "<group>"; };
+		CA771645216BB75F00235B52 /* QiitaNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaNewsCell.swift; sourceTree = "<group>"; };
+		CA771646216BB75F00235B52 /* QiitaNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaNewsCell.xib; sourceTree = "<group>"; };
+		CAD00EF9216E5D6100D9FF60 /* SearchSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSettingViewController.swift; sourceTree = "<group>"; };
+		CAD00EFD2170E0E300D9FF60 /* PageMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PageMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD00EFF2170E1D100D9FF60 /* PageMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PageMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD00F012170E80900D9FF60 /* PageMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PageMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD00F032170EF5400D9FF60 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		CAD00F072171154600D9FF60 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDCC9A0C19C3A2CC17A31CAB /* Pods-QiitaNewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaNewsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaNewsApp/Pods-QiitaNewsApp.release.xcconfig"; sourceTree = "<group>"; };
+		F9D6884B9574D5A081D27D28 /* Pods-QiitaNewsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QiitaNewsAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QiitaNewsAppUITests/Pods-QiitaNewsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FCC88B2C38394B87575A880B /* Pods_QiitaNewsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QiitaNewsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA7715FB216BA78800235B52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD00F082171154600D9FF60 /* SVProgressHUD.framework in Frameworks */,
+				CA24451B216CF3B200B55891 /* SDWebImage.framework in Frameworks */,
+				CA4331981FD49B2AC87BB817 /* Pods_QiitaNewsApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA77160F216BA78900235B52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				125DE1909E47F8B55D0DF161 /* Pods_QiitaNewsAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA77161A216BA78900235B52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C892792A23BABAF974BAF884 /* Pods_QiitaNewsAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CA43E742727B86AE5119A04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD00F072171154600D9FF60 /* SVProgressHUD.framework */,
+				CAD00F012170E80900D9FF60 /* PageMenu.framework */,
+				CAD00EFF2170E1D100D9FF60 /* PageMenu.framework */,
+				CAD00EFD2170E0E300D9FF60 /* PageMenu.framework */,
+				CA24451A216CF3B200B55891 /* SDWebImage.framework */,
+				CA244518216CEE4900B55891 /* Alamofire.framework */,
+				193DC12FF6966B4CC3F65DEB /* Pods_QiitaNewsApp.framework */,
+				95207E557A9632F5B39A1F43 /* Pods_QiitaNewsAppTests.framework */,
+				FCC88B2C38394B87575A880B /* Pods_QiitaNewsAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D433A8C6D78AAA621CC051F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				619F73B1958B0825DCA8B51B /* Pods-QiitaNewsApp.debug.xcconfig */,
+				DDCC9A0C19C3A2CC17A31CAB /* Pods-QiitaNewsApp.release.xcconfig */,
+				6AFDA863A8AB6CDE1E48A37E /* Pods-QiitaNewsAppTests.debug.xcconfig */,
+				5FF22BD50FBBD27B91FC5568 /* Pods-QiitaNewsAppTests.release.xcconfig */,
+				4F5272DA62AB8FD1F67867DA /* Pods-QiitaNewsAppUITests.debug.xcconfig */,
+				F9D6884B9574D5A081D27D28 /* Pods-QiitaNewsAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA6A605F2172533700F0CF5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA771605216BA78800235B52 /* Main.storyboard */,
+				CA771641216BA86D00235B52 /* LaunchScreen.storyboard */,
+				CA6A6061217253B700F0CF5D /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA6A60602172539400F0CF5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CAD00F032170EF5400D9FF60 /* MenuViewController.swift */,
+				CA771632216BA7FB00235B52 /* NotificationSettingViewController.swift */,
+				CA77162F216BA7FB00235B52 /* QiitaNewsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CA6A6061217253B700F0CF5D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CA771645216BB75F00235B52 /* QiitaNewsCell.swift */,
+				CA771646216BB75F00235B52 /* QiitaNewsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CA7715F5216BA78800235B52 = {
+			isa = PBXGroup;
+			children = (
+				CA771600216BA78800235B52 /* QiitaNewsApp */,
+				CA771615216BA78900235B52 /* QiitaNewsAppTests */,
+				CA771620216BA78900235B52 /* QiitaNewsAppUITests */,
+				CA7715FF216BA78800235B52 /* Products */,
+				4D433A8C6D78AAA621CC051F /* Pods */,
+				4CA43E742727B86AE5119A04 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CA7715FF216BA78800235B52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA7715FE216BA78800235B52 /* QiitaNewsApp.app */,
+				CA771612216BA78900235B52 /* QiitaNewsAppTests.xctest */,
+				CA77161D216BA78900235B52 /* QiitaNewsAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA771600216BA78800235B52 /* QiitaNewsApp */ = {
+			isa = PBXGroup;
+			children = (
+				CAD00EFC216E5DEF00D9FF60 /* Model */,
+				CA6A605F2172533700F0CF5D /* View */,
+				CA6A60602172539400F0CF5D /* Controller */,
+				CAD00EFB216E5DAC00D9FF60 /* Search */,
+				CA771608216BA78900235B52 /* Assets.xcassets */,
+				CA77160D216BA78900235B52 /* Info.plist */,
+			);
+			path = QiitaNewsApp;
+			sourceTree = "<group>";
+		};
+		CA771615216BA78900235B52 /* QiitaNewsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA771616216BA78900235B52 /* QiitaNewsAppTests.swift */,
+				CA771618216BA78900235B52 /* Info.plist */,
+			);
+			path = QiitaNewsAppTests;
+			sourceTree = "<group>";
+		};
+		CA771620216BA78900235B52 /* QiitaNewsAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA771621216BA78900235B52 /* QiitaNewsAppUITests.swift */,
+				CA771623216BA78900235B52 /* Info.plist */,
+			);
+			path = QiitaNewsAppUITests;
+			sourceTree = "<group>";
+		};
+		CAD00EFB216E5DAC00D9FF60 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CA771601216BA78800235B52 /* AppDelegate.swift */,
+				CA771631216BA7FB00235B52 /* SearchViewController.swift */,
+				CA771636216BA7FC00235B52 /* SearchResultViewController.swift */,
+				CAD00EF9216E5D6100D9FF60 /* SearchSettingViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CAD00EFC216E5DEF00D9FF60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA771643216BAA5400235B52 /* QiitaNewsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA7715FD216BA78800235B52 /* QiitaNewsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA771626216BA78900235B52 /* Build configuration list for PBXNativeTarget "QiitaNewsApp" */;
+			buildPhases = (
+				489CC621B65B35542D3476FF /* [CP] Check Pods Manifest.lock */,
+				CA7715FA216BA78800235B52 /* Sources */,
+				CA7715FB216BA78800235B52 /* Frameworks */,
+				CA7715FC216BA78800235B52 /* Resources */,
+				513B00DEF788FA4F6B99B956 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QiitaNewsApp;
+			productName = QiitaNewsApp;
+			productReference = CA7715FE216BA78800235B52 /* QiitaNewsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA771611216BA78900235B52 /* QiitaNewsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA771629216BA78900235B52 /* Build configuration list for PBXNativeTarget "QiitaNewsAppTests" */;
+			buildPhases = (
+				B367E5EF416295BC202F0859 /* [CP] Check Pods Manifest.lock */,
+				CA77160E216BA78900235B52 /* Sources */,
+				CA77160F216BA78900235B52 /* Frameworks */,
+				CA771610216BA78900235B52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA771614216BA78900235B52 /* PBXTargetDependency */,
+			);
+			name = QiitaNewsAppTests;
+			productName = QiitaNewsAppTests;
+			productReference = CA771612216BA78900235B52 /* QiitaNewsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA77161C216BA78900235B52 /* QiitaNewsAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA77162C216BA78900235B52 /* Build configuration list for PBXNativeTarget "QiitaNewsAppUITests" */;
+			buildPhases = (
+				443DC5ADF76E13C6FF424DC1 /* [CP] Check Pods Manifest.lock */,
+				CA771619216BA78900235B52 /* Sources */,
+				CA77161A216BA78900235B52 /* Frameworks */,
+				CA77161B216BA78900235B52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA77161F216BA78900235B52 /* PBXTargetDependency */,
+			);
+			name = QiitaNewsAppUITests;
+			productName = QiitaNewsAppUITests;
+			productReference = CA77161D216BA78900235B52 /* QiitaNewsAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA7715F6216BA78800235B52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Sho Nozaki";
+				TargetAttributes = {
+					CA7715FD216BA78800235B52 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					CA771611216BA78900235B52 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = CA7715FD216BA78800235B52;
+					};
+					CA77161C216BA78900235B52 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = CA7715FD216BA78800235B52;
+					};
+				};
+			};
+			buildConfigurationList = CA7715F9216BA78800235B52 /* Build configuration list for PBXProject "QiitaNewsApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA7715F5216BA78800235B52;
+			productRefGroup = CA7715FF216BA78800235B52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA7715FD216BA78800235B52 /* QiitaNewsApp */,
+				CA771611216BA78900235B52 /* QiitaNewsAppTests */,
+				CA77161C216BA78900235B52 /* QiitaNewsAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA7715FC216BA78800235B52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA771609216BA78900235B52 /* Assets.xcassets in Resources */,
+				CA771642216BA86D00235B52 /* LaunchScreen.storyboard in Resources */,
+				CA771648216BB75F00235B52 /* QiitaNewsCell.xib in Resources */,
+				CA771607216BA78800235B52 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA771610216BA78900235B52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA77161B216BA78900235B52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		443DC5ADF76E13C6FF424DC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QiitaNewsAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		489CC621B65B35542D3476FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QiitaNewsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		513B00DEF788FA4F6B99B956 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QiitaNewsApp/Pods-QiitaNewsApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QiitaNewsApp/Pods-QiitaNewsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B367E5EF416295BC202F0859 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QiitaNewsAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA7715FA216BA78800235B52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA77163A216BA7FC00235B52 /* NotificationSettingViewController.swift in Sources */,
+				CAD00F042170EF5400D9FF60 /* MenuViewController.swift in Sources */,
+				CA771644216BAA5400235B52 /* QiitaNewsModel.swift in Sources */,
+				CA77163E216BA7FC00235B52 /* SearchResultViewController.swift in Sources */,
+				CA771639216BA7FC00235B52 /* SearchViewController.swift in Sources */,
+				CAD00EFA216E5D6100D9FF60 /* SearchSettingViewController.swift in Sources */,
+				CA771637216BA7FC00235B52 /* QiitaNewsViewController.swift in Sources */,
+				CA771602216BA78800235B52 /* AppDelegate.swift in Sources */,
+				CA771647216BB75F00235B52 /* QiitaNewsCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA77160E216BA78900235B52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA771617216BA78900235B52 /* QiitaNewsAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA771619216BA78900235B52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA771622216BA78900235B52 /* QiitaNewsAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA771614216BA78900235B52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA7715FD216BA78800235B52 /* QiitaNewsApp */;
+			targetProxy = CA771613216BA78900235B52 /* PBXContainerItemProxy */;
+		};
+		CA77161F216BA78900235B52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA7715FD216BA78800235B52 /* QiitaNewsApp */;
+			targetProxy = CA77161E216BA78900235B52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA771605216BA78800235B52 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA771606216BA78800235B52 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA771624216BA78900235B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA771625216BA78900235B52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA771627216BA78900235B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619F73B1958B0825DCA8B51B /* Pods-QiitaNewsApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57YUG7X94T;
+				INFOPLIST_FILE = QiitaNewsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.QiitaNewsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA771628216BA78900235B52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDCC9A0C19C3A2CC17A31CAB /* Pods-QiitaNewsApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57YUG7X94T;
+				INFOPLIST_FILE = QiitaNewsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.QiitaNewsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CA77162A216BA78900235B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AFDA863A8AB6CDE1E48A37E /* Pods-QiitaNewsAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57YUG7X94T;
+				INFOPLIST_FILE = QiitaNewsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.QiitaNewsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiitaNewsApp.app/QiitaNewsApp";
+			};
+			name = Debug;
+		};
+		CA77162B216BA78900235B52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FF22BD50FBBD27B91FC5568 /* Pods-QiitaNewsAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57YUG7X94T;
+				INFOPLIST_FILE = QiitaNewsAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.QiitaNewsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QiitaNewsApp.app/QiitaNewsApp";
+			};
+			name = Release;
+		};
+		CA77162D216BA78900235B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F5272DA62AB8FD1F67867DA /* Pods-QiitaNewsAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57YUG7X94T;
+				INFOPLIST_FILE = QiitaNewsAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.QiitaNewsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QiitaNewsApp;
+			};
+			name = Debug;
+		};
+		CA77162E216BA78900235B52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9D6884B9574D5A081D27D28 /* Pods-QiitaNewsAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57YUG7X94T;
+				INFOPLIST_FILE = QiitaNewsAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.QiitaNewsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QiitaNewsApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA7715F9216BA78800235B52 /* Build configuration list for PBXProject "QiitaNewsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA771624216BA78900235B52 /* Debug */,
+				CA771625216BA78900235B52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA771626216BA78900235B52 /* Build configuration list for PBXNativeTarget "QiitaNewsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA771627216BA78900235B52 /* Debug */,
+				CA771628216BA78900235B52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA771629216BA78900235B52 /* Build configuration list for PBXNativeTarget "QiitaNewsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA77162A216BA78900235B52 /* Debug */,
+				CA77162B216BA78900235B52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA77162C216BA78900235B52 /* Build configuration list for PBXNativeTarget "QiitaNewsAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA77162D216BA78900235B52 /* Debug */,
+				CA77162E216BA78900235B52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA7715F6216BA78800235B52 /* Project object */;
+}
